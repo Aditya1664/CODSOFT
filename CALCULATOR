@@ -13,10 +13,10 @@ def division(a,b):
 
 while True:
     print('''Enter:
-    1 for Addition,
-    2 for Subtraction,
-    3 for Multiplication,
-    4 for Division''')
+1 for Addition,
+2 for Subtraction,
+3 for Multiplication,
+4 for Division''')
     ch=input("Enter choice:")
 
     if ch in ('1', '2', '3', '4'):
