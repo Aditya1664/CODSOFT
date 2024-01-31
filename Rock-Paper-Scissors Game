@@ -1,0 +1,84 @@
+print('''
+$$\   $$\ $$$$$$$$\ $$\       $$\       $$$$$$\    
+$$ |  $$ |$$  _____|$$ |      $$ |     $$  __$$\   
+$$ |  $$ |$$ |      $$ |      $$ |     $$ /  $$ |  
+$$$$$$$$ |$$$$$\    $$ |      $$ |     $$ |  $$ |  
+$$  __$$ |$$  __|   $$ |      $$ |     $$ |  $$ |  
+$$ |  $$ |$$ |      $$ |      $$ |     $$ |  $$ |  
+$$ |  $$ |$$$$$$$$\ $$$$$$$$\ $$$$$$$$\ $$$$$$  |  
+\__|  \__|\________|\________|\________|\______/
+''')
+print('''\nReady to play 'Rock','Paper' and 'Scissor'?
+Lets Play!!!!''')
+import random
+while True:
+    rock=(''' Rock
+         _______
+     ---'   ____)
+          (_____)
+          (_____)
+          (____)
+    ---.__(___)
+    ''')
+
+    paper=(''' Paper
+         _______
+    ---'    ____)____
+               ______)
+              _______)
+             _______)
+    ---.__________)
+    ''')
+
+    scissor=(''' Scissor
+        _______
+    ---'   ____)____
+              ______)
+           __________)
+          (____)
+    ---.__(___)
+    ''')
+    li=[rock,paper,scissor]
+    comp=random.randint(0,2)
+    print('''\nEnter a number from below:
+    0 for Rock,
+    1 for Paper,
+    2 for Scissor.''')
+    user=int(input("Enter a number from 0 to 2-"))
+    if user>2 or user<0: 
+        print("Wrong choice. You lose.")
+        break
+
+    else:
+        
+        print(f"\nComputer choice is:{comp}")
+        print(li[comp])
+    
+        print(f"User choice is:{user}")
+        print(li[user])
+    
+        if comp==user:
+            print("Its a draw.")
+
+        elif comp==0 and user==1:
+            print("User wins 🎉.")
+
+        elif comp==0 and user==2:
+            print("Computer wins ☠.")
+    
+        elif comp==1 and user==0:
+            print("Computer wins ☠.")
+
+        elif comp==1 and user==2:
+            print("User wins 🎉.")
+
+        elif comp==2 and user==0:
+            print("User wins 🎉.")
+
+        elif comp==2 and user==1:
+            print("Computer wins ☠.")
+
+    print("\nDO you wan tto play again?")
+    a=input("Yes/No:").lower()
+    if a=='no':
+        break
