@@ -11,10 +11,6 @@ def division(a,b):
     return a/b
     
 
-
-
-
-
 while True:
     print('''Enter:
     1 for Addition,
